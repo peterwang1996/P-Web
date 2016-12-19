@@ -1,0 +1,257 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+    font-size: 100%;
+}
+
+body {
+    height: 100%;
+    font-size: 1em;
+    font-family: brandon-grotesque, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+}
+
+p {
+    font-family: brandon-grotesque, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 1em;
+}
+
+span {
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+}
+
+#lyric-logo {
+    background: url(../img/lyric-logo.png);
+    width: 126px;
+    height: 91px;
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 20px;
+    z-index: 999;
+}
+
+#navi-text {
+    position: absolute;
+    right: 110px;
+    margin-top: 50px;
+    z-index: 999;
+}
+
+.navi {
+    margin: 20px;
+    margin-top: 0;
+    display: inline-block;
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2em;
+    overflow: hidden;
+    position: relative;
+    height:30px;
+}
+
+#navi1{
+	width:75px;
+	overflow: hidden;
+}
+
+#navi2{
+	width:76px;
+	overflow: hidden;
+}
+#navi3{
+	width:90px;
+	overflow: hidden;
+}
+#navi4{
+	width:51px;
+	overflow: hidden;
+}
+
+.underline{
+	height:2px;
+	width:100%;
+	background-color: #e69c9d;
+	position: absolute;
+	bottom: 0;
+}
+
+#menu-icon {
+    position: fixed;
+    top: 53px;
+    right: 40px;
+    width: 35px;
+    height: 18px;
+    z-index: 9999;
+}
+
+#menu-icon div {
+    height: 1px;
+    width: 35px;
+    background-color: #5f5f5f;
+    margin-bottom: 8px;
+}
+
+#wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#video-wrap {
+    position: absolute;
+    bottom: 60px;
+    left: -20px;
+}
+
+#video-wrap2 {
+    display: none;
+}
+
+#source {
+    display: none;
+}
+
+#type-text {
+    font-family: brandon-grotesque, sans-serif;
+    color: #5f576e;
+    position: absolute;
+    bottom: 20%;
+    left: 8%;
+    font-size: 1.9em;
+    width: 82%;
+}
+
+#output-wrap {
+    float: left;
+}
+
+#begin-text {
+    font-size: 1.1em;
+    position: absolute;
+    right: 0;
+}
+
+label {
+    color: #e69c9d;
+}
+
+@-moz-keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -moz-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+    60% {
+        -moz-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+}
+
+@-webkit-keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+    60% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -moz-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+    60% {
+        -moz-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+}
+
+.arrow {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -17px;
+    width: 33px;
+    height: 32px;
+    background-image: url(../img/index-arrow.png);
+    background-size: contain;
+    cursor: pointer;
+	z-index:999;
+}
+
+.bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 30%, 0);
+        transform: translate3d(0, 30%, 0)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+#begin-text{
+	display: none;
+}
+
+.fadeInUp{
+	animation: fadeInUp 1.0s;
+}
+
