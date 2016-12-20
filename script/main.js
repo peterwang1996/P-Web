@@ -1,9 +1,15 @@
 (function() {
     $(document).ready(function() {
-        $(".begin").width($(window).width()).height($(window).height());
-        var fsize = (($(window).width()) / 1440 * 1.9).toString() + 'em';
-        $("#type-text").css("font-size", fsize);
-        $(".p-col div").width(($(window).width() - 1) / 6).height(($(window).width() - 1) / 6);
+        function adjust() {
+            $(".begin").width($(window).width()).height($(window).height());
+            var fsize = (($(window).width()) / 1440 * 1.9).toString() + 'em';
+            $("#type-text").css("font-size", fsize);
+            $(".p-col div").width(($(window).width() - 1) / 6).height(($(window).width() - 1) / 6);
+        }
+        window.onload = function() {
+            window.onresize = adjust;
+            adjust();
+        }
     });
     $(window).click(function() {
             $("#video-wrap1").hide();
@@ -183,8 +189,10 @@
             if (t == 0) return b;
             if ((t /= d) == 1) return b + c;
             if (!p) p = d * .3;
-            if (a < Math.abs(c)) { a = c;
-                var s = p / 4; } else var s = p / (2 * Math.PI) * Math.asin(c / a);
+            if (a < Math.abs(c)) {
+                a = c;
+                var s = p / 4;
+            } else var s = p / (2 * Math.PI) * Math.asin(c / a);
             return -(a * Math.pow(2, 10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p)) + b;
         },
         easeOutElastic: function(x, t, b, c, d) {
@@ -194,8 +202,10 @@
             if (t == 0) return b;
             if ((t /= d) == 1) return b + c;
             if (!p) p = d * .3;
-            if (a < Math.abs(c)) { a = c;
-                var s = p / 4; } else var s = p / (2 * Math.PI) * Math.asin(c / a);
+            if (a < Math.abs(c)) {
+                a = c;
+                var s = p / 4;
+            } else var s = p / (2 * Math.PI) * Math.asin(c / a);
             return a * Math.pow(2, -10 * t) * Math.sin((t * d - s) * (2 * Math.PI) / p) + c + b;
         },
         easeInOutElastic: function(x, t, b, c, d) {
@@ -205,8 +215,10 @@
             if (t == 0) return b;
             if ((t /= d / 2) == 2) return b + c;
             if (!p) p = d * (.3 * 1.5);
-            if (a < Math.abs(c)) { a = c;
-                var s = p / 4; } else var s = p / (2 * Math.PI) * Math.asin(c / a);
+            if (a < Math.abs(c)) {
+                a = c;
+                var s = p / 4;
+            } else var s = p / (2 * Math.PI) * Math.asin(c / a);
             if (t < 1) return -.5 * (a * Math.pow(2, 10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p)) + b;
             return a * Math.pow(2, -10 * (t -= 1)) * Math.sin((t * d - s) * (2 * Math.PI) / p) * .5 + c + b;
         },

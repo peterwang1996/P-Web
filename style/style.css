@@ -307,6 +307,50 @@ label {
     background: #2f3058 url(../img/p1.png) no-repeat center;
 }
 
+#p2{
+    background: #426a97 url(../img/p2.png) no-repeat center;
+}
+
+#p3{
+    background: url(../img/p3.png) no-repeat center;
+}
+
+#p4{
+    background: #6f7e97 url(../img/p4.png) no-repeat center;
+}
+
+#p5{
+    background: url(../img/p5.png) no-repeat center;
+}
+
+#p6{
+    background: #3d4259 url(../img/p6.png) no-repeat center;
+}
+
+#p7{
+    background: url(../img/p7.png) no-repeat center;
+}
+
+#p8{
+    background: #d1ccb8 url(../img/p8.png) no-repeat center;
+}
+
+#p9{
+    background: #2b2b39 url(../img/p9.png) no-repeat center;
+}
+
+#p10{
+    background: url(../img/p10.png) no-repeat center;
+}
+
+#p11{
+    background: url(../img/p11.png) no-repeat center;
+}
+
+#p12{
+    background: #8d97b5 url(../img/p12.png) no-repeat center;
+}
+
 
 .mask1{
     background-color: #5f576e;
