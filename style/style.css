@@ -94,7 +94,6 @@ header {
 	overflow: hidden;
 }
 
-
 .underline{
 	height:2px;
 	width:100%;
@@ -282,9 +281,57 @@ label {
 	animation: fadeInUp 1.0s;
 }
 
-.col div{
-    width:240px;
-    height:240px;
-    display: inline-block;
+#p-wrap{
+    position: absolute;
+    height:100%;
+    width:100%;
+    overflow:hidden;
+    display: none;
 }
 
+#portfolio-content{
+    bottom:0;
+    position: absolute;
+}
+
+.p-col div{
+    float:left;
+    width:240px;
+    height:240px;
+    padding:0;
+    margin:0;
+    display:none;
+}
+
+#p1{
+    background: #2f3058 url(../img/p1.png) no-repeat center;
+}
+
+
+.mask1{
+    background-color: #5f576e;
+    width: 600px;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    -webkit-transform: skew(-30deg);
+    -moz-transform: skew(-30deg);
+    -o-transform: skew(-30deg);
+    transform: skew(-30deg);
+    z-index:999;
+    left:-600px;
+}
+
+.mask2{
+    background-color: #5f576e;
+    width: 200px;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    -webkit-transform: skew(-30deg);
+    -moz-transform: skew(-30deg);
+    -o-transform: skew(-30deg);
+    transform: skew(-30deg);
+    z-index:999;
+    left:-400px;
+}
