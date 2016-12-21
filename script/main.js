@@ -12,6 +12,15 @@
             window.onresize = adjust;
             adjust();
         }
+        $('#menu-icon').click(function() {
+            $(this).toggleClass('open');
+            $("#menu-bar").toggleClass('active');
+            setTimeout(function() {
+                $('#menu-mask').toggleClass('active1');
+                $('#menu-bar h2').toggleClass('active2');
+                $('#menu-bar div').toggleClass('active2');
+            }, 200);
+        });
     });
     $(window).click(function() {
             $("#video-wrap1").hide();
@@ -45,11 +54,11 @@
         $("#type-text").fadeOut("slow");
         $("#begin-text").fadeOut("slow");
         setTimeout(function() {
-                $("#wrap").fadeOut("slow");
-                $(".p-col div").delay(400).fadeIn(400);
-                $(".mask1").animate({ left: "+=2400px" }, 1000, 'easeInOutCubic');
-                $(".mask2").delay(200).animate({ left: "+=2400px" }, 800, 'easeInOutCubic');
-            }, 1000);
+            $("#wrap").fadeOut("slow");
+            $(".p-col div").delay(400).fadeIn(400);
+            $(".mask1").animate({ left: "+=2400px" }, 1000, 'easeInOutCubic');
+            $(".mask2").delay(200).animate({ left: "+=2400px" }, 800, 'easeInOutCubic');
+        }, 1000);
         $("#p-wrap").show();
     }, 6000);
 
