@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    -webkit-text-size-adjust: none;
 }
 
 html {
@@ -108,11 +109,31 @@ a{
     position: relative;
 }
 
+#navi1 .underline {
+    width: 90px;
+    left:-90px;
+}
+
+#navi2 .underline {
+    width: 90px;
+    left:-90px;
+}
+
+#navi3 .underline {
+    width: 100px;
+    left:-100px;
+}
+
+#navi4 .underline {
+    width: 65px;
+    left:-65px;
+}
+
 .underline {
     height: 2px;
-    width: 100%;
     background-color: #e69c9d;
     position: absolute;
+    overflow: hidden;
     bottom: 0;
 }
 
