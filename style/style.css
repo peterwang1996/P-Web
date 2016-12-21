@@ -379,3 +379,56 @@ label {
     z-index:999;
     left:-400px;
 }
+
+.ph-text{
+    position: absolute;
+    z-index: 999;
+}
+
+.p-col div h2{
+    border-bottom: 3px solid #e69c9d;
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6em;
+    color:#fff;
+    background: transparent;
+    margin: 0px 40px 0px 40px;
+    margin-top:70px;
+    padding-bottom: 15px;
+    transform: scale(0);
+    transition: all 0.3s;
+    opacity: 0;
+    text-align: center;
+}
+
+.p-col div p {
+    color: #e7d9c7;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.3s;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.p-col div:hover h2{
+    transform: scale(1);
+    opacity: 1;
+}
+
+.p-col div:hover p{
+    transform: scale(1);
+    opacity: 1;
+}
+
+.p-mask{
+    background-color: #000;
+    opacity:0;
+    transition: all 0.3s ease-in 0.4s;
+    position: absolute;
+}
+
+.p-col div:hover .p-mask{
+    opacity:0.5; 
+    transition-delay: 0s;
+}

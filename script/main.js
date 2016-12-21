@@ -5,6 +5,8 @@
             var fsize = (($(window).width()) / 1440 * 1.9).toString() + 'em';
             $("#type-text").css("font-size", fsize);
             $(".p-col div").width(($(window).width() - 1) / 6).height(($(window).width() - 1) / 6);
+            $(".p-col div h2").css("margin-top", ((($(window).width()) / 1440 * 70).toString() + 'px'));
+            $(".p-col div h2").css("font-size", ((($(window).width()) / 1440 * 1.6).toString() + 'em'));
         }
         window.onload = function() {
             window.onresize = adjust;
@@ -43,11 +45,11 @@
         $("#type-text").fadeOut("slow");
         $("#begin-text").fadeOut("slow");
         setTimeout(function() {
-            $("#wrap").fadeOut("slow");
-            $(".p-col div").fadeIn("slow");
-            $(".mask1").animate({ left: "+=2400px" }, 600).easing['easeInOutExpo'];
-            $(".mask2").animate({ left: "+=2400px" }, 900).delay(400).easing['easeInOutExpo'];
-        }, 1000);
+                $("#wrap").fadeOut("slow");
+                $(".p-col div").delay(400).fadeIn(400);
+                $(".mask1").animate({ left: "+=2400px" }, 1000, 'easeInOutCubic');
+                $(".mask2").delay(200).animate({ left: "+=2400px" }, 800, 'easeInOutCubic');
+            }, 1000);
         $("#p-wrap").show();
     }, 6000);
 
