@@ -39,7 +39,7 @@ header {
 h2{
     font-family: futura-pt, sans-serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 200;
     font-size: 1.6em;
     color: #fff;
 }
@@ -89,23 +89,23 @@ a{
 }
 
 #navi1 {
-    width: 75px;
     overflow: hidden;
+    position: relative;
 }
 
 #navi2 {
-    width: 76px;
     overflow: hidden;
+    position: relative;
 }
 
 #navi3 {
-    width: 90px;
     overflow: hidden;
+    position: relative;
 }
 
 #navi4 {
-    width: 51px;
     overflow: hidden;
+    position: relative;
 }
 
 .underline {
