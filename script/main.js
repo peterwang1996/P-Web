@@ -81,57 +81,6 @@
         $("#navi1").addClass('active');
     });
 
-
-
-    //Navigation Animation
-    $("#navi1").mouseover(function() {
-        $("#navi1 div").animate({ left: "+=90px" }, 200);
-    });
-
-    $("#navi1").mouseleave(function() {
-        $("#navi1 div").animate({ left: "+=90px" }, 200);
-        setTimeout(function() {
-            $("#navi1 div").css("left", "-90px");
-        }, 300);
-    });
-
-    $("#navi2").mouseover(function() {
-        $("#navi2 div").animate({ left: "+=90px" }, 200);
-    });
-
-    $("#navi2").mouseleave(function() {
-        $("#navi2 div").animate({ left: "+=90px" }, 200);
-        setTimeout(function() {
-            $("#navi2 div").css("left", "-90px");
-        }, 300);
-    });
-
-    $("#navi3").mouseover(function() {
-        $("#navi3 div").animate({ left: "+=100px" }, 200);
-    });
-
-    $("#navi3").mouseleave(function() {
-        $("#navi3 div").animate({ left: "+=100px" }, 200);
-        setTimeout(function() {
-            $("#navi3 div").css("left", "-100px");
-        }, 300);
-    });
-
-    $("#navi4").mouseover(function() {
-        $("#navi4 div").animate({ left: "+=65px" }, 200);
-    });
-
-    $("#navi4").mouseleave(function() {
-        $("#navi4 div").animate({ left: "+=65px" }, 200);
-        setTimeout(function() {
-            $("#navi4 div").css("left", "-65px");
-        }, 300);
-    });
-
-    /*
-
-    */
-
     jQuery.easing['easeInOutExpo'] = jQuery.easing['swing'];
 
     jQuery.extend(jQuery.easing, {

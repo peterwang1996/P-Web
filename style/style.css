@@ -37,7 +37,7 @@ header {
     height: 100px;
 }
 
-h2{
+h2 {
     font-family: futura-pt, sans-serif;
     font-style: normal;
     font-weight: 200;
@@ -45,7 +45,7 @@ h2{
     color: #fff;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -57,7 +57,7 @@ a{
     margin-left: 30px;
     margin-top: 20px;
     z-index: 999;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 #navi-text {
@@ -88,78 +88,54 @@ a{
     overflow: hidden;
     position: relative;
     height: 30px;
-    color:#5f5f5f;
-}
-
-#navi1 {
+    color: #5f5f5f;
     overflow: hidden;
     position: relative;
 }
 
-#navi1.active {
-    color:#e69c9d;
-    transition: all 1s ease-in-out;
-}
-
-#navi2 {
-    overflow: hidden;
-    position: relative;
-}
-
-#navi3 {
-    overflow: hidden;
-    position: relative;
-}
-
-#navi4 {
-    overflow: hidden;
-    position: relative;
-}
-
-#navi1 .underline {
-    width: 90px;
-    left:-90px;
-}
-
-#navi2 .underline {
-    width: 90px;
-    left:-90px;
-}
-
-#navi3 .underline {
-    width: 100px;
-    left:-100px;
-}
-
-#navi4 .underline {
-    width: 65px;
-    left:-65px;
-}
-
-.underline {
+.navi .underline {
+    width: 100%;
     height: 2px;
-    background-color: #e69c9d;
+    background: #fff;
     position: absolute;
-    overflow: hidden;
     bottom: 0;
 }
 
-#navi1 div {
-    left: -75px;
+.navi .underline::before {
+    content: ' ';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #e79c9e;
+    transition: width 0s ease-out .5s;
 }
 
-#navi2 div {
-    left: -76px;
+.navi .underline::after {
+    content: ' ';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
 }
 
-#navi3 div {
-    left: -90px;
+.navi:hover .underline::before {
+    width: 100%;
+    transition: width .5s ease-in-out;
 }
 
-#navi4 div {
-    left: -51px;
+.navi:not(:hover) .underline::after {
+    width: 100%;
+    transition: width .5s ease-in-out;
 }
 
+.navi:not(:hover) .underline::before {
+    width: 0%;
+    transition: width 0s ease-out .5s;
+}
 /********** Menu ***********/
 
 #menu-icon {
@@ -242,28 +218,28 @@ a{
     background-color: #fff;
 }
 
-#menu-bar{
+#menu-bar {
     position: absolute;
-    width:560px;
-    height:100%;
-    z-index:9998;
-    right:0;
-    top:0;
+    width: 560px;
+    height: 100%;
+    z-index: 9998;
+    right: 0;
+    top: 0;
     overflow: hidden;
-    display:none;
+    display: none;
 }
 
-#menu-bar.active{
-    display:block;
+#menu-bar.active {
+    display: block;
 }
 
-#menu-mask{
+#menu-mask {
     position: absolute;
     overflow: hidden;
-    top:-500px;
-    left:-200px;
-    width:1000px;
-    height:1300px;
+    top: -500px;
+    left: -200px;
+    width: 1000px;
+    height: 1300px;
     background-color: #e69c9d;
     opacity: 0;
     transform: translate(20px, -800px) rotate(200deg);
@@ -271,93 +247,91 @@ a{
     z-index: -1;
 }
 
-#menu-mask.active1{
-    opacity:1; 
+#menu-mask.active1 {
+    opacity: 1;
     transform: translate(-20px, 50px) rotate(200deg);
     transition: all 0.5s ease-in-out;
 }
 
-#menu-bar h2{
+#menu-bar h2 {
     text-align: center;
-    padding:20px;
+    padding: 20px;
     opacity: 0;
     transition: all 0.5s ease-in-out;
     font-weight: 200;
     font-size: 1.4em;
 }
 
-#menu-bar a{
-    color:#fff;
+#menu-bar a {
+    color: #fff;
     transition: all 0.3s ease-in-out;
 }
 
-#menu-bar a:hover{
-    color:#5f576e;
+#menu-bar a:hover {
+    color: #5f576e;
     transition: all 0.3s ease-in-out;
 }
 
-#menu-bar h2:nth-child(1){
-    margin-top:100px;
+#menu-bar h2:nth-child(1) {
+    margin-top: 100px;
 }
 
-#menu-bar h2.active2{
+#menu-bar h2.active2 {
     opacity: 1;
 }
 
-#menu-bar div{
-    margin-top:50px;
+#menu-bar div {
+    margin-top: 50px;
     opacity: 0;
     transition: all 0.5s ease-in-out;
-
 }
 
-#menu-bar div.active2{
+#menu-bar div.active2 {
     opacity: 1;
 }
 
-#dribbble1{
+#dribbble1 {
     background-image: url(../img/dribbble1.png);
-    width:25px;
-    height:24px;
-    float:left;
+    width: 25px;
+    height: 24px;
+    float: left;
     position: relative;
-    left:212px;
+    left: 212px;
 }
 
-#dribbble1:hover{
+#dribbble1:hover {
     background-image: url(../img/dribbble10.png);
     transition: all 0.3s ease-in-out;
 }
 
-#vimeo1{
+#vimeo1 {
     background-image: url(../img/vimeo1.png);
-    width:25px;
-    height:20px;
-    float:left;
+    width: 25px;
+    height: 20px;
+    float: left;
     position: relative;
-    left:242px;
-    top:3px;
+    left: 242px;
+    top: 3px;
 }
 
-#vimeo1:hover{
+#vimeo1:hover {
     background-image: url(../img/vimeo10.png);
     transition: all 0.3s ease-in-out;
 }
 
-#github1{
+#github1 {
     background-image: url(../img/github1.png);
-    width:23px;
-    height:25px;
-    float:left;
+    width: 23px;
+    height: 25px;
+    float: left;
     position: relative;
-    left:272px;
+    left: 272px;
 }
 
-#github1:hover{
+#github1:hover {
     background-image: url(../img/github10.png);
     transition: all 0.3s ease-in-out;
 }
-
 
 #wrap {
     width: 100%;
@@ -652,9 +626,10 @@ label {
     transition-delay: 0s;
 }
 
+
 /****  what I do *****/
 
-#p-wrap1{
+#p-wrap1 {
     display: none;
 }
 
@@ -663,150 +638,148 @@ label {
     overflow: hidden;
 }
 
-#wrap1-head{
-    margin-top:150px;
+#wrap1-head {
+    margin-top: 150px;
     margin-bottom: 70px;
 }
 
-h1{
+h1 {
     font-family: futura-pt, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 4.0em;
-    color:#221814;
+    color: #221814;
     text-align: center;
-    letter-spacing:4px;
+    letter-spacing: 4px;
 }
 
-#wrap1-head p{
+#wrap1-head p {
     text-align: center;
-    margin-top:20px;
+    margin-top: 20px;
 }
 
-#wrap1-head span{
+#wrap1-head span {
     font-family: brandon-grotesque, sans-serif;
     font-style: normal;
     font-weight: 100;
     font-size: 1.2em;
-    color:#5f576e;
+    color: #5f576e;
 }
 
-#wrap1-head span:before{
-    content:'|';
-    padding:7px;
+#wrap1-head span:before {
+    content: '|';
+    padding: 7px;
 }
 
-#wrap1-head span:nth-child(1):before{
-    content:'';
+#wrap1-head span:nth-child(1):before {
+    content: '';
 }
 
-.wrap1-module{
+.wrap1-module {
     position: relative;
-    height:100%;
-    width:100%;
+    height: 100%;
+    width: 100%;
 }
 
-.wrap1-module h2{
+.wrap1-module h2 {
     font-family: futura-pt, sans-serif;
-    color:#5f576e;
+    color: #5f576e;
     font-weight: 400;
     text-align: center;
     margin-bottom: 30px;
     font-size: 1.8em;
 }
 
-.w-col{
-    width:100%;
-    height:300px;
+.w-col {
+    width: 100%;
+    height: 300px;
     position: relative;
-    overflow:hidden;
+    overflow: hidden;
     margin-bottom: 40px;
 }
 
-.w-block{
-    width:40%;
+.w-block {
+    width: 40%;
     position: relative;
-    float:left;
-    height:300px;
+    float: left;
+    height: 300px;
 }
 
-.w-col .w-block:nth-child(1){
-    left:8%;
+.w-col .w-block:nth-child(1) {
+    left: 8%;
 }
 
-.w-col .w-block:nth-child(2){
-    left:13%;
+.w-col .w-block:nth-child(2) {
+    left: 13%;
 }
 
-.W-block-img{
-    width:100%;
-    height:220px;
+.W-block-img {
+    width: 100%;
+    height: 220px;
 }
 
-#w1{
+#w1 {
     background: url(../img/w1.png) no-repeat center;
 }
 
-#w2{
+#w2 {
     background: url(../img/w2.png) no-repeat center;
 }
 
-#w3{
+#w3 {
     background: url(../img/w3.png) no-repeat center;
 }
 
-#w4{
+#w4 {
     background: url(../img/w4.png) no-repeat center;
 }
 
-#w5{
+#w5 {
     background: url(../img/w5.png) no-repeat center;
 }
 
-#w6{
+#w6 {
     background: url(../img/w6.png) no-repeat center;
 }
 
-#w7{
+#w7 {
     background: url(../img/w7.png) no-repeat center;
 }
 
-#w8{
+#w8 {
     background: url(../img/w8.png) no-repeat center;
 }
 
-#w9{
+#w9 {
     background: url(../img/w9.png) no-repeat center;
 }
 
-#w10{
+#w10 {
     background: url(../img/w10.png) no-repeat center;
 }
 
-h3{
+h3 {
     font-family: futura-pt, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1.4em;
-    color:#221814;
-    left:0;
+    color: #221814;
+    left: 0;
     margin-top: 20px;
     margin-bottom: 2px;
 }
 
-.w-block span{
+.w-block span {
     position: absolute;
-    right:0;
-    bottom:40px;
+    right: 0;
+    bottom: 40px;
     font-family: brandon-grotesque, sans-serif;
     font-style: normal;
     font-weight: 200;
     font-size: 0.8em;
-    color:#747a95;
+    color: #747a95;
 }
 
-.w-block p{
-    color:#221814;
+.w-block p {
+    color: #221814;
 }
-
-
