@@ -24,8 +24,9 @@
     });
 
     var firstrun = true;
-    function Helloclean(){
-        if (firstrun == true){
+
+    function Helloclean() {
+        if (firstrun == true) {
             $("#video-wrap1").hide();
             $("#video-wrap2").show();
             $("#begin2").get(0).play();
@@ -43,21 +44,9 @@
         }
     }
 
-    $(window).one("click", function(){
-            Helloclean();
-        });
-
-        /*
-            $(window).scroll(function() {
-                $("#video-wrap1").hide();
-                $("#video-wrap2").show();
-                $("#begin2").get(0).play();
-                $("#type-text").hide();
-                $("#begin-text").hide();
-                $("#arrow1").hide();
-                $("#portfolio-content").fadeIn();
-            })
-       */
+    $(window).one("click", function() {
+        Helloclean();
+    });
 
     setTimeout(function() {
         Helloclean();
@@ -69,19 +58,32 @@
         $("#begin-text").show();
     }, 2500);
 
-//Navigation click
+    //Navigation click
     $("#lyric-logo").click(function() {
-        $("#p-wrap1").hide();
         $("#p-wrap0").show();
+        $(".p-col div").delay(400).fadeIn(400);
+        $(".mask1").animate({ left: "+=2400px" }, 1000, 'easeInOutCubic');
+        $(".mask2").delay(200).animate({ left: "+=2400px" }, 800, 'easeInOutCubic');
+        setTimeout(function() {
+            $("#p-wrap1").hide();
+        }, 200);
+        $(".navi").removeClass('active');
     });
 
     $("#navi1").click(function() {
-        $("#p-wrap0").hide();
-        $("#p-wrap1").show();
-        $("#navi1").toggleClass('active');
+        $(".p-col div").delay(600).fadeOut(400);
+        $(".mask1").animate({ left: "-=2400px" }, 1000, 'easeInOutCubic');
+        $(".mask2").delay(200).animate({ left: "-=2400px" }, 800, 'easeInOutCubic');
+        setTimeout(function() {
+            $("#p-wrap0").hide();
+            $("#p-wrap1").show();
+        }, 1000);
+        $("#navi1").addClass('active');
     });
 
-//Navigation Animation
+
+
+    //Navigation Animation
     $("#navi1").mouseover(function() {
         $("#navi1 div").animate({ left: "+=90px" }, 200);
     });
