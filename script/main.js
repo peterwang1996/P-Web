@@ -22,7 +22,10 @@
             }, 200);
         });
     });
-    $(window).click(function() {
+
+    var firstrun = true;
+    function Helloclean(){
+        if (firstrun == true){
             $("#video-wrap1").hide();
             $("#video-wrap2").show();
             $("#begin2").get(0).play();
@@ -34,8 +37,16 @@
                 $(".mask1").animate({ left: "+=2400px" }, 1000, 'easeInOutCubic');
                 $(".mask2").delay(200).animate({ left: "+=2400px" }, 800, 'easeInOutCubic');
             }, 1000);
-            $("#p-wrap").show();
-        })
+            $("#p-wrap0").show();
+            $("#navi-text").delay(1000).fadeIn(800);
+            firstrun = false;
+        }
+    }
+
+    $(window).one("click", function(){
+            Helloclean();
+        });
+
         /*
             $(window).scroll(function() {
                 $("#video-wrap1").hide();
@@ -46,26 +57,31 @@
                 $("#arrow1").hide();
                 $("#portfolio-content").fadeIn();
             })
-        */
+       */
+
     setTimeout(function() {
-        $("#video-wrap1").hide();
-        $("#video-wrap2").show();
-        $("#begin2").get(0).play();
-        $("#type-text").fadeOut("slow");
-        $("#begin-text").fadeOut("slow");
-        setTimeout(function() {
-            $("#wrap").fadeOut("slow");
-            $(".p-col div").delay(400).fadeIn(400);
-            $(".mask1").animate({ left: "+=2400px" }, 1000, 'easeInOutCubic');
-            $(".mask2").delay(200).animate({ left: "+=2400px" }, 800, 'easeInOutCubic');
-        }, 1000);
-        $("#p-wrap").show();
-    }, 6000);
+        Helloclean();
+    }, 5000);
+
+
 
     setTimeout(function() {
         $("#begin-text").show();
     }, 2500);
 
+//Navigation click
+    $("#lyric-logo").click(function() {
+        $("#p-wrap1").hide();
+        $("#p-wrap0").show();
+    });
+
+    $("#navi1").click(function() {
+        $("#p-wrap0").hide();
+        $("#p-wrap1").show();
+        $("#navi1").toggleClass('active');
+    });
+
+//Navigation Animation
     $("#navi1").mouseover(function() {
         $("#navi1 div").animate({ left: "+=90px" }, 200);
     });
